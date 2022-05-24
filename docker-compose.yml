@@ -51,6 +51,7 @@ services:
       - ./backend:/app
     expose:
       - "8001"
+    user: root
     depends_on:
       - mysql
     command: uwsgi --socket :8001 --module mysite.wsgi
